@@ -1,33 +1,15 @@
-{% extends "learning_logs/base.html" %} {% block header %}
-<div
-  class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-12 text-center shadow-lg rounded-b-2xl"
->
-  <h1 class="text-4xl font-extrabold tracking-wide">
-    Student Discussions Forum
-  </h1>
-  <p class="mt-2 text-lg font-light">Engage. Learn. Grow together.</p>
-</div>
-{% endblock header %} {% block content %}
-<div class="max-w-4xl mx-auto mt-10 px-4 space-y-8 text-center">
-  <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-    <h4 class="text-xl font-semibold text-gray-800">
-      <a
-        href="{% url 'users:register' %}"
-        class="text-indigo-600 hover:underline"
-        >Create an account</a
-      >
-      to join ongoing discussions or start your own!
-    </h4>
-  </div>
-
-  <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-    <h4 class="text-lg text-gray-700">
-      Whenever you're inspired or learn something new, start a discussion or
-      contribute to an existing one.
-      <span class="font-medium text-indigo-600"
-        >Your voice helps everyone grow!</span
-      >
-    </h4>
-  </div>
-</div>
-{% endblock content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Log React</title>
+    <link rel="stylesheet" href="{% static 'css/main.f855e6bc.css' %}" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="{% static 'js/452.8ab44547.chunk.js' %}"></script>
+    <script src="{% static 'js/main.b86bc580.js' %}"></script>
+  </body>
+</html>
