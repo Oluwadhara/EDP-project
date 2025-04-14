@@ -7,6 +7,7 @@ function App() {
       <p>
         Copyright <code>@2025</code>
       </p>
+      {/* <p>Dara Rocks</p> */}
     </div>
   );
 }
