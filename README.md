@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🎓 Online Forum for Student Discussions
 
 The project is a web-based application built using **Django (backend)** and **React (frontend)**. It serves as an online forum where students can start topics, post questions, and engage in meaningful discussions with peers. This platform is designed to foster collaborative learning in a user-friendly and organized environment.
@@ -36,7 +35,3 @@ py manage.py runserver
 
 
  
-=======
-# EDPproject
-Online Forum for student discussions - Made with Django and React
->>>>>>> 6031d5686aa3bd743193e4f2711a0bbc1450fa1c
