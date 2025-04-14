@@ -1,35 +1,41 @@
 {% extends "learning_logs/base.html" %} {% block header %}
 <div
-  class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-10 text-center shadow-md rounded-b-xl"
+  class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-12 text-center shadow-md rounded-b-2xl"
 >
-  <h1 class="text-3xl font-bold">Discussions</h1>
+  <h1 class="text-4xl font-extrabold tracking-tight">💬 Discussions</h1>
+  <p class="mt-2 text-lg font-light">Browse topics or start something new</p>
 </div>
 {% endblock header %} {% block content %}
-<div class="max-w-3xl mx-auto mt-8 px-4 space-y-6">
-  <ul class="space-y-4">
+<div class="max-w-4xl mx-auto mt-10 px-4 space-y-8">
+  <!-- Topics list -->
+  <div class="space-y-4">
     {% for topic in topics %}
-    <li class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-      <h4 class="text-xl font-semibold text-indigo-700">
+    <div
+      class="bg-white p-6 rounded-xl shadow transition-all hover:shadow-xl hover:scale-[1.01]"
+    >
+      <h4 class="text-2xl font-semibold text-indigo-700">
         <a
           href="{% url 'learning_logs:topic' topic.id %}"
           class="hover:underline"
-          >{{ topic }}</a
         >
+          {{ topic }}
+        </a>
       </h4>
-    </li>
+    </div>
     {% empty %}
-    <li class="text-center text-gray-600">
+    <div class="text-center text-gray-500 text-lg">
       No discussions have been added yet.
-    </li>
+    </div>
     {% endfor %}
-  </ul>
+  </div>
 
+  <!-- Call to Action -->
   <div class="text-center">
     <a
       href="{% url 'learning_logs:new_topic' %}"
-      class="inline-block mt-6 px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition"
+      class="inline-block px-6 py-3 bg-indigo-600 text-white rounded-full font-medium text-lg shadow-md hover:bg-indigo-700 hover:shadow-lg transition duration-300"
     >
-      Start a new discussion
+      ➕ Start a New Discussion
     </a>
   </div>
 </div>

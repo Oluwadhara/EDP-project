@@ -1,4 +1,4 @@
-{% extends "learning_logs/base.html" %} {% block header %}
+{% extends "learning_logs/base.html" %} {% load static %} {% block header %}
 <div
   class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-12 text-center shadow-lg rounded-b-2xl"
 >
@@ -14,8 +14,9 @@
       <a
         href="{% url 'users:register' %}"
         class="text-indigo-600 hover:underline"
-        >Create an account</a
       >
+        Create an account
+      </a>
       to join ongoing discussions or start your own!
     </h4>
   </div>
@@ -24,10 +25,16 @@
     <h4 class="text-lg text-gray-700">
       Whenever you're inspired or learn something new, start a discussion or
       contribute to an existing one.
-      <span class="font-medium text-indigo-600"
-        >Your voice helps everyone grow!</span
-      >
+      <span class="font-medium text-indigo-600">
+        Your voice helps everyone grow!
+      </span>
     </h4>
   </div>
+
+  <!-- 🔽 Mount your React app here -->
+  <div id="react-root" class="mt-10"></div>
 </div>
+
+<!-- 🔽 Load the compiled React JavaScript -->
+<script src="{% static 'js/main.302aaa5a.js' %}"></script>
 {% endblock content %}
